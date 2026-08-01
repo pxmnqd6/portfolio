@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio one-page สำหรับผู้สมัครศึกษาต่อคณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย" />
+    <title>Portfolio MDCU Applicant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              chula: '#E01E5A',
+              medical: '#0F766E',
+              slatecream: '#F8FAFC'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Prompt', sans-serif;
+      }
+      .section-title {
+        position: relative;
+        display: inline-block;
+      }
+      .section-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 60%;
+        height: 3px;
+        background: linear-gradient(90deg, #E01E5A, #0F766E);
+        border-radius: 9999px;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-700 antialiased">
+    <!-- ส่วน Header และ Navigation -->
+    <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#home" class="flex items-center gap-3 font-semibold text-slate-800">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-chula to-medical text-sm font-bold text-white">M</span>
+          <span class="text-lg">MDCU Applicant</span>
+        </a>
+
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="#about" class="transition hover:text-chula">เกี่ยวกับฉัน</a>
+          <a href="#skills" class="transition hover:text-chula">ความสามารถ</a>
+          <a href="#projects" class="transition hover:text-chula">ผลงาน</a>
+          <a href="#contact" class="transition hover:text-chula">ติดต่อ</a>
+        </div>
+
+        <button id="menu-button" class="rounded-lg border border-slate-300 p-2 text-slate-700 md:hidden" aria-label="เปิดเมนู">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
+        <div class="flex flex-col gap-3">
+          <a href="#about" class="rounded px-2 py-2 transition hover:bg-slate-100">เกี่ยวกับฉัน</a>
+          <a href="#skills" class="rounded px-2 py-2 transition hover:bg-slate-100">ความสามารถ</a>
+          <a href="#projects" class="rounded px-2 py-2 transition hover:bg-slate-100">ผลงาน</a>
+          <a href="#contact" class="rounded px-2 py-2 transition hover:bg-slate-100">ติดต่อ</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ส่วน Hero -->
+    <section id="home" class="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(224,30,90,0.12),_transparent_30%),linear-gradient(135deg,_#ffffff_0%,_#f8fafc_60%,_#f0fdf4_100%)]">
+      <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-0">
+        <div class="max-w-2xl">
+          <p class="mb-4 inline-flex items-center rounded-full border border-chula/20 bg-white/80 px-4 py-2 text-sm font-medium text-chula shadow-sm">
+            ผู้สมัครศึกษาต่อคณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+          </p>
+          <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            ด.ญ.พิมพ์ณดา จันทร์เอี่ยม ขำพงศ์
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-slate-600 sm:text-xl">
+            Dedicated to Healing, Driven by Science | มุ่งมั่นสู่การเป็นแพทย์จุฬาฯ เพื่อสังคม
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#about" class="rounded-full bg-chula px-6 py-3 text-center font-semibold text-white shadow-lg shadow-chula/20 transition hover:-translate-y-1">
+              สำรวจผลงานและแรงบันดาลใจ
+            </a>
+            <a href="#projects" class="rounded-full border border-medical/30 bg-white px-6 py-3 text-center font-semibold text-medical transition hover:-translate-y-1">
+              ดูกิจกรรมและผลงาน
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/70">
+          <img src="https://placehold.co/900x1100/0F766E/FFFFFF?text=Medical+Portrait" alt="ภาพตัวอย่างนักเรียนแพทย์" class="h-full w-full rounded-[1.5rem] object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ส่วน About Me -->
+    <section id="about" class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-chula">About Me</p>
+          <h2 class="section-title text-3xl font-bold text-slate-900 sm:text-4xl">แรงบันดาลใจและตัวตนของผู้สมัคร</h2>
+        </div>
+
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div class="rounded-[2rem] border border-slate-200 bg-slate-50 p-5 shadow-sm">
+            <img src="https://placehold.co/800x600/E01E5A/FFFFFF?text=Student+in+White+Coat" alt="ภาพนักเรียนในชุดกาวน์ฝึกงาน" class="h-full w-full rounded-[1.5rem] object-cover" />
+          </div>
+          <div class="space-y-6">
+            <p class="text-lg leading-8 text-slate-600">
+              ฉันมีความสนใจในด้านการแพทย์ตั้งแต่ adolescence เพราะเห็นว่าความเจ็บป่วยไม่เพียงส่งผลต่อร่างกาย แต่ยังเกี่ยวพันกับความรู้สึก ความหวัง และคุณภาพชีวิตของผู้ป่วยและครอบครัว ฉันจึงมองว่า การเป็นแพทย์คือการผสานวิทยาศาสตร์ ความเอื้ออาทร และความรับผิดชอบต่อสังคมอย่างลึกซึ้ง
+            </p>
+            <p class="text-lg leading-8 text-slate-600">
+              ด้วยความซื่อสัตย์ สุขุม รอบคอบ และให้ความสำคัญกับจริยธรรมทางการแพทย์ ฉันตั้งใจที่จะใช้ความรู้ ความเป็นผู้นำ และความเมตตากรุณาในการพัฒนาสุขภาวะของผู้คน โดยเฉพาะในพื้นที่ที่ยังขาดการเข้าถึงบริการสุขภาพที่มีคุณภาพ
+            </p>
+            <div class="rounded-2xl border border-medical/20 bg-medical/5 p-6">
+              <h3 class="text-xl font-semibold text-slate-900">เป้าหมายในการเป็นแพทย์</h3>
+              <p class="mt-3 text-slate-600">
+                เพื่อเป็นบุคลากรทางการแพทย์ที่เชื่อมั่นได้ทั้งในเชิงวิชาการและคุณธรรม พร้อมสนับสนุนให้ผู้ป่วยได้รับการดูแลอย่างมีคุณค่าและเท่าเทียม
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ส่วน Skills และ Competencies -->
+    <section id="skills" class="bg-slate-50 py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-medical">Skills & Competencies</p>
+          <h2 class="section-title text-3xl font-bold text-slate-900 sm:text-4xl">ความสามารถที่สะท้อนความพร้อมทางวิชาการและจริยธรรม</h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="mb-4 inline-flex rounded-2xl bg-chula/10 p-3 text-chula">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.75A2.25 2.25 0 1012 11.25a2.25 2.25 0 000-4.5zm-6 8.5a2.25 2.25 0 112.25-2.25A2.25 2.25 0 016 15.25zm12 0a2.25 2.25 0 112.25-2.25A2.25 2.25 0 0118 15.25z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900">Academic Excellence</h3>
+            <ul class="mt-4 space-y-3 text-slate-600">
+              <li>• ชีววิทยา (Biology)</li>
+              <li>• เคมี (Chemistry)</li>
+              <li>• ภาษาอังกฤษสำหรับการแพทย์</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="mb-4 inline-flex rounded-2xl bg-medical/10 p-3 text-medical">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 3h6m-6 18h6M5 7h14M7 5v14m10-14v14" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900">Research & Practical Skills</h3>
+            <ul class="mt-4 space-y-3 text-slate-600">
+              <li>• การทำวิจัยพื้นฐาน</li>
+              <li>• การทดลองในห้องแล็บ</li>
+              <li>• ทักษะปฐมพยาบาลเบื้องต้น (CPR/First Aid)</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="mb-4 inline-flex rounded-2xl bg-amber-100 p-3 text-amber-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 5h2m-1 14v-6m0 0l-2-2m2 2l2-2" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900">Soft Skills & Ethics</h3>
+            <ul class="mt-4 space-y-3 text-slate-600">
+              <li>• Empathy และความเข้าใจมนุษย์</li>
+              <li>• Critical Thinking</li>
+              <li>• Communication, Teamwork และ Leadership</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ส่วน Projects, Research & Activities -->
+    <section id="projects" class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-chula">Projects & Activities</p>
+          <h2 class="section-title text-3xl font-bold text-slate-900 sm:text-4xl">ผลงานทางวิชาการ กิจกรรมจิตอาสา และความเป็นผู้นำ</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <!-- Card 1 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/E01E5A/FFFFFF?text=Research+Innovation" alt="โครงงานวิจัยสุขภาพ" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-chula/10 px-3 py-1 text-sm font-medium text-chula">วิจัย</span>
+                <span class="rounded-full bg-slate-200 px-3 py-1 text-sm font-medium text-slate-600">วิชาการ</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">โครงงานสกัดสารจากพืชเพื่อยับยั้งแบคทีเรีย</h3>
+              <p class="mt-3 text-slate-600">บทบาท: ผู้ร่วมวิจัยหลัก และผู้เตรียมข้อมูลทดลอง เรียนรู้การควบคุมคุณภาพและสรุปผลเชิงวิชาการ</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/0F766E/FFFFFF?text=Olympiad+Science" alt="การแข่งขันโอลิมปิกวิชาการ" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-medical/10 px-3 py-1 text-sm font-medium text-medical">วิชาการ</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">การแข่งขันโอลิมปิกวิชาการเคมีและชีววิทยา</h3>
+              <p class="mt-3 text-slate-600">บทบาท: ผู้เข้าร่วมทีมและนักศึกษาที่ชื่นชอบการแก้ปัญหาเชิงวิเคราะห์</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Volunteer+Hospital" alt="กิจกรรมจิตอาสาในโรงพยาบาล" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-700">จิตอาสา</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">กิจกรรมจิตอาสาในโรงพยาบาลและหน่วยแพทย์เคลื่อนที่</h3>
+              <p class="mt-3 text-slate-600">เรียนรู้ความอดทน ความรับฟัง และการดูแลผู้ป่วยด้วยความอ่อนโยน</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/FB923C/FFFFFF?text=Medical+Camp" alt="ค่ายอยากเป็นหมอ" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-700">กิจกรรม</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">ค่ายอยากเป็นหมอ MDCU Open House</h3>
+              <p class="mt-3 text-slate-600">ได้เห็นระบบการศึกษาและจริยธรรมของแพทย์อย่างใกล้ชิด</p>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/64748B/FFFFFF?text=Community+Service" alt="กิจกรรมช่วยเหลือชุมชน" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700">จิตอาสา</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">กิจกรรมช่วยเหลือผู้สูงอายุและชุมชน</h3>
+              <p class="mt-3 text-slate-600">พัฒนาทักษะการสื่อสารและความรับผิดชอบต่อสิ่งแวดล้อมและสังคม</p>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Medical+Review" alt="งานสืบค้นความรู้ทางการแพทย์" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-violet-100 px-3 py-1 text-sm font-medium text-violet-700">วิชาการ</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">การสืบค้นและนำเสนอ Medical Review Article</h3>
+              <p class="mt-3 text-slate-600">ฝึกการอ่านงานวิจัยเชิงลึกและนำเสนอแนวคิดที่มีประโยชน์ต่อสุขภาพ</p>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/DB2777/FFFFFF?text=Leadership+Program" alt="กิจกรรมความเป็นผู้นำ" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-pink-100 px-3 py-1 text-sm font-medium text-pink-700">ผู้นำ</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">โครงการพัฒนาผู้นำในชั้นเรียนและชุมชน</h3>
+              <p class="mt-3 text-slate-600">ได้พัฒนาความสามารถในการจัดการทีมและรับผิดชอบต่อสิ่งที่สั่งให้เสร็จอย่างมีคุณภาพ</p>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/16A34A/FFFFFF?text=Health+Education" alt="กิจกรรมให้ความรู้สุขภาพ" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">จิตอาสา</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">กิจกรรมให้ความรู้ด้านสุขภาพให้เพื่อนและชุมชน</h3>
+              <p class="mt-3 text-slate-600">สร้างความเข้าใจเรื่องพฤติกรรมสุขภาพและการป้องกันโรคในระดับพื้นฐาน</p>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/0EA5E9/FFFFFF?text=Science+Workshop" alt="เวิร์กช็อปวิทยาศาสตร์" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-cyan-100 px-3 py-1 text-sm font-medium text-cyan-700">วิชาการ</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">เวิร์กช็อปวิทยาศาสตร์เพื่อการเรียนรู้เชิงปฏิบัติ</h3>
+              <p class="mt-3 text-slate-600">ฝึกทักษะการสังเกต การทดลอง และการสื่อสารผลลัพธ์ให้ผู้อื่นเข้าใจได้อย่างชัดเจน</p>
+            </div>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+            <img src="https://placehold.co/600x400/991B1B/FFFFFF?text=Ethics+Service" alt="กิจกรรมด้านจริยธรรมทางการแพทย์" class="h-44 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-3 flex flex-wrap gap-2">
+                <span class="rounded-full bg-rose-100 px-3 py-1 text-sm font-medium text-rose-700">จริยธรรม</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">กิจกรรมเสริมสร้างจริยธรรมและความรับผิดชอบต่อสังคม</h3>
+              <p class="mt-3 text-slate-600">สะท้อนความตั้งใจในการเป็นแพทย์ที่เคารพสิทธิมนุษยชนและให้ความสำคัญต่อความเป็นธรรม</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ส่วน Contact และ Footer -->
+    <section id="contact" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-rose-200">Contact</p>
+            <h2 class="text-3xl font-bold sm:text-4xl">ขอบคุณที่ให้โอกาสพิจารณาความตั้งใจของฉัน</h2>
+            <p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+              หากต้องการข้อมูลเพิ่มเติมหรือขอพูดคุยเกี่ยวกับความตั้งใจในการศึกษาต่อคณะแพทยศาสตร์ จุฬาฯ สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur">
+            <div class="space-y-5">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-300">Email</p>
+                <a href="mailto:pimnada.jan@pccpl.ac.th" class="mt-2 inline-block text-lg text-white transition hover:text-rose-200">pimnada.jan@pccpl.ac.th</a>
+              </div>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-300">Phone</p>
+                <a href="tel:+66999999999" class="mt-2 inline-block text-lg text-white transition hover:text-rose-200">+66 99 999 9999</a>
+              </div>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-300">Social / Academic Portfolio</p>
+                <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="#" class="rounded-full border border-white/20 px-4 py-2 text-sm transition hover:bg-white/10">LinkedIn</a>
+                  <a href="#" class="rounded-full border border-white/20 px-4 py-2 text-sm transition hover:bg-white/10">ResearchGate</a>
+                  <a href="#" class="rounded-full border border-white/20 px-4 py-2 text-sm transition hover:bg-white/10">GitHub / Blog</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-slate-200 bg-white py-6 text-center text-sm text-slate-500">
+      <p>Copyright © 2026 [ชื่อนักเรียน]. All Rights Reserved. | MDCU Applicant</p>
+    </footer>
+
+    <script>
+      // JavaScript สำหรับ Hamburger Menu บนมือถือ
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('#mobile-menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
